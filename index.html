@@ -12,6 +12,8 @@
     <meta property="og:image" content="photo.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rajasblack.github.io/">
+    <!-- Favicon (AI themed) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='32' cy='32' r='32' fill='%233B82F6'/%3E%3Cpath d='M32 16C26.4772 16 22 20.4772 22 26C22 31.5228 26.4772 36 32 36C37.5228 36 42 31.5228 42 26C42 20.4772 37.5228 16 32 16ZM32 34C27.5817 34 24 30.4183 24 26C24 21.5817 27.5817 18 32 18C36.4183 18 40 21.5817 40 26C40 30.4183 36.4183 34 32 34Z' fill='white'/%3E%3Cpath d='M40 46C40 41.5817 36.4183 38 32 38C27.5817 38 24 41.5817 24 46' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Crect x='28' y='44' width='8' height='4' rx='2' fill='white'/%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -102,6 +104,15 @@
         }
         .animate-fadeIn {
             animation: fadeIn 1s ease forwards;
+        }
+        /* Contact info icon circles for consistent sizing */
+        .contact-icon-circle {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
         }
     </style>
 </head>
@@ -531,7 +542,7 @@
         </div>
     </section>
 
-    <!-- Contact Section (social links removed) -->
+    <!-- Contact Section -->
     <section id="contact" class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -541,10 +552,10 @@
                     Interested in discussing potential collaborations, career opportunities, or AI-related projects? Feel free to reach out!
                 </p>
             </div>
-            
             <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2">
-                    <div class="bg-white p-8 rounded-xl shadow-md">
+                <!-- Get in Touch Form -->
+                <div class="md:w-1/2 flex flex-col justify-center">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-6">Get in Touch</h3>
                         <form action="https://formspree.io/f/mwpbyvbl" method="POST">
                             <div class="mb-4">
@@ -569,43 +580,44 @@
                         </form>
                     </div>
                 </div>
-                
-                <div class="md:w-1/2">
-                    <div class="bg-gradient-to-r from-blue-400 to-purple-500 p-1 rounded-xl h-full">
-                        <div class="bg-white p-8 rounded-lg h-full">
+                <!-- Contact Information -->
+                <div class="md:w-1/2 flex flex-col justify-center">
+                    <div class="bg-gradient-to-r from-blue-400 to-purple-500 p-1 rounded-xl h-full flex flex-col justify-center">
+                        <div class="bg-white p-8 rounded-lg h-full flex flex-col justify-center">
                             <h3 class="text-xl font-bold mb-6">Contact Information</h3>
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
-                                        <i class="fas fa-envelope text-blue-600"></i>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="contact-icon-circle bg-blue-100 mb-3">
+                                        <i class="fas fa-envelope text-blue-600 text-2xl"></i>
                                     </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-medium text-gray-800">Email</h4>
-                                        <a href="mailto:rajasvim1617@gmail.com" class="text-blue-600 hover:underline">rajasvim1617@gmail.com</a>
-                                    </div>
+                                    <h4 class="text-lg font-medium text-gray-800">Email</h4>
+                                    <a href="mailto:rajasvim1617@gmail.com" class="text-blue-600 hover:underline">rajasvim1617@gmail.com</a>
                                 </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 bg-purple-100 p-3 rounded-full">
-                                        <i class="fab fa-linkedin-in text-purple-600"></i>
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="contact-icon-circle bg-purple-100 mb-3">
+                                        <i class="fab fa-linkedin-in text-purple-600 text-2xl"></i>
                                     </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-medium text-gray-800">LinkedIn</h4>
-                                        <a href="https://www.linkedin.com/in/rajasblack" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/rajasblack</a>
-                                    </div>
+                                    <h4 class="text-lg font-medium text-gray-800">LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/rajasblack" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/rajasblack</a>
                                 </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-full">
-                                        <i class="fab fa-github text-indigo-600"></i>
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="contact-icon-circle bg-indigo-100 mb-3">
+                                        <i class="fab fa-github text-indigo-600 text-2xl"></i>
                                     </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-medium text-gray-800">GitHub</h4>
-                                        <a href="https://github.com/rajasblack" target="_blank" class="text-blue-600 hover:underline">github.com/rajasblack</a>
+                                    <h4 class="text-lg font-medium text-gray-800">GitHub</h4>
+                                    <a href="https://github.com/rajasblack" target="_blank" class="text-blue-600 hover:underline">github.com/rajasblack</a>
+                                </div>
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="contact-icon-circle bg-gradient-to-r from-blue-400 to-purple-500 mb-3">
+                                        <i class="fas fa-robot text-white text-2xl"></i>
                                     </div>
+                                    <h4 class="text-lg font-medium text-gray-800">Role</h4>
+                                    <span class="text-blue-600">Generative AI Engineer</span>
                                 </div>
                             </div>
-                            <!-- Social links (Twitter, Instagram, Medium) removed -->
+                            <div class="mt-2 text-center">
+                                <span class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-medium text-base">Available for AI Consulting & Collaboration</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -613,7 +625,7 @@
         </div>
     </section>
 
-    <!-- Footer (only LinkedIn and GitHub icons) -->
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -651,25 +663,21 @@
         // Mobile menu toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
                     // Close mobile menu if open
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
@@ -677,10 +685,9 @@
                 }
             });
         });
-        
+
         // Back to top button
         const backToTopBtn = document.getElementById('back-to-top');
-        
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopBtn.classList.remove('opacity-0', 'invisible');
@@ -690,19 +697,17 @@
                 backToTopBtn.classList.add('opacity-0', 'invisible');
             }
         });
-        
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        
+
         // Animate elements when they come into view
         const observerOptions = {
             threshold: 0.1
         };
-        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -710,7 +715,6 @@
                 }
             });
         }, observerOptions);
-        
         document.querySelectorAll('.timeline-item, .project-card, .skill-pill').forEach(el => {
             observer.observe(el);
         });
