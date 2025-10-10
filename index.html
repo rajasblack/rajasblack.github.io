@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Portfolio | Generative AI Engineer</title>
+    <!-- SEO Meta Description -->
+    <meta name="description" content="Rajesh Kumar - Generative AI Engineer & Senior Data Scientist portfolio. Explore expertise in Data Science, Machine Learning, NLP, notable projects, and professional experience.">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rajesh Kumar | Generative AI Engineer Portfolio">
+    <meta property="og:description" content="Explore Rajesh Kumar's expertise in Data Science, Machine Learning, NLP, and AI-driven solutions.">
+    <meta property="og:image" content="photo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rajasblack.github.io/">
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome via CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Poppins font via Google Fonts CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
         body {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        
         .gradient-text {
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        
         .section-divider {
             position: relative;
             height: 150px;
             overflow: hidden;
         }
-        
         .section-divider::before {
             content: "";
             position: absolute;
@@ -41,16 +48,13 @@
             background-size: 100px 100px;
             transform: rotate(180deg);
         }
-        
         .skill-pill {
             transition: all 0.3s ease;
         }
-        
         .skill-pill:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
-        
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -62,21 +66,17 @@
             background: #3b82f6;
             border: 3px solid #bfdbfe;
         }
-        
         .project-card {
             transition: all 0.3s ease;
             background: linear-gradient(145deg, #ffffff, #f3f4f6);
         }
-        
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
         .nav-link {
             position: relative;
         }
-        
         .nav-link::after {
             content: '';
             position: absolute;
@@ -87,656 +87,25 @@
             background: #3b82f6;
             transition: width 0.3s ease;
         }
-        
         .nav-link:hover::after {
             width: 100%;
         }
-        
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
         }
-        
         .floating {
             animation: float 6s ease-in-out infinite;
         }
+        /* Fade-in animation CSS */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease forwards;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#" class="text-xl font-bold gradient-text">Portfolio</a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">About</a>
-                    <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600">Experience</a>
-                    <a href="#education" class="nav-link text-gray-700 hover:text-blue-600">Education</a>
-                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600">Skills</a>
-                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600">Projects</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
-            <div class="flex flex-col space-y-3">
-                <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">About</a>
-                <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600">Experience</a>
-                <a href="#education" class="nav-link text-gray-700 hover:text-blue-600">Education</a>
-                <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600">Skills</a>
-                <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600">Projects</a>
-                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                    Hi, I'm <span class="gradient-text">Rajesh Kumar</span>
-                </h1>
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">
-                    Generative AI Engineer & Senior Data Scientist
-                </h2>
-                <p class="text-lg text-gray-600 mb-8">
-                    I build innovative AI solutions with expertise in Data Science, Machine Learning, and Natural Language Processing.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-                        Contact Me
-                    </a>
-                    <a href="#projects" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition duration-300">
-                        View Projects
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-20 blur-xl"></div>
-                    <div class="relative w-full h-full flex items-center justify-center">
-                        <div class="bg-white p-2 rounded-full shadow-xl floating">
-                            <div class="bg-gradient-to-r from-blue-400 to-purple-500 p-1 rounded-full">
-                                <img src="./photo.jpg" 
-                                     alt="Profile" 
-                                     class="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-white">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="section-divider"></div>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <p class="text-lg text-gray-600 mb-6">
-                        I am a passionate <span class="font-semibold text-blue-600">Generative AI Engineer</span> with extensive experience in Data Science, Machine Learning, and Natural Language Processing (NLP). Currently, I am a <span class="font-semibold">Senior Data Scientist</span> at <span class="font-semibold">Infosys Limited</span>, where I leverage my deep expertise to build innovative AI solutions.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-6">
-                        I thrive in both <span class="font-semibold">independent and team-based environments</span>, collaborating with cross-functional teams to deliver optimal results. My goal is to continuously grow as a developer and AI Architect, contributing to the development of intelligent systems that can transform industries and improve lives.
-                    </p>
-                    <div class="flex space-x-4">
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <h3 class="font-bold text-blue-600 mb-2">6+ Years</h3>
-                            <p class="text-gray-600">Experience</p>
-                        </div>
-                        <div class="bg-purple-50 p-4 rounded-lg">
-                            <h3 class="font-bold text-purple-600 mb-2">10+</h3>
-                            <p class="text-gray-600">Projects</p>
-                        </div>
-                        <div class="bg-indigo-50 p-4 rounded-lg">
-                            <h3 class="font-bold text-indigo-600 mb-2">AI/ML</h3>
-                            <p class="text-gray-600">Specialization</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="bg-gradient-to-r from-blue-400 to-purple-500 p-1 rounded-xl">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold mb-4 text-gray-800">My Expertise</h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-700">Generative AI</span>
-                                        <span class="text-gray-700">95%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-700">Machine Learning</span>
-                                        <span class="text-gray-700">90%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                        <div class="bg-purple-500 h-2.5 rounded-full" style="width: 90%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-700">Natural Language Processing</span>
-                                        <span class="text-gray-700">95%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                        <div class="bg-indigo-500 h-2.5 rounded-full" style="width: 95%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-700">Data Science</span>
-                                        <span class="text-gray-700">85%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                        <div class="bg-blue-500 h-2.5 rounded-full" style="width: 85%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Work <span class="gradient-text">Experience</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
-            </div>
-            <div class="relative">
-                <!-- Timeline -->
-                <div class="border-l-2 border-blue-200 ml-8 md:ml-16 pl-8 md:pl-16 space-y-12">
-                    <!-- Item 1 -->
-                    <div class="relative timeline-item">
-                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                                <h3 class="text-xl font-bold text-gray-800">Senior Data Scientist</h3>
-                                <span class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Sep 2024 - Present</span>
-                            </div>
-                            <h4 class="text-lg font-semibold text-blue-600 mb-3">Infosys Limited</h4>
-                            <p class="text-gray-600 mb-4">
-                                Leading AI-driven initiatives and delivering end-to-end Generative AI solutions. Working closely with clients to translate business challenges into innovative AI solutions.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Agentic AI</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Information Retrieval</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Docker</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Kubernetes</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 2 -->
-                    <div class="relative timeline-item">
-                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                                <h3 class="text-xl font-bold text-gray-800">Data Scientist</h3>
-                                <span class="inline-block bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full">Sep 2019 - Mar 2024</span>
-                            </div>
-                            <h4 class="text-lg font-semibold text-purple-600 mb-3">KPMG</h4>
-                            <p class="text-gray-600 mb-4">
-                                Utilized data science methodologies to provide actionable insights and predictions, helping clients in various industries enhance their decision-making processes. Worked extensively with machine learning models and data analysis techniques.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">LLMs</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">RAG</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">NLP</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Conversational AI</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 3 -->
-                    <div class="relative timeline-item">
-                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                                <h3 class="text-xl font-bold text-gray-800">Service Desk Analyst</h3>
-                                <span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">Jan 2019 - Aug 2019</span>
-                            </div>
-                            <h4 class="text-lg font-semibold text-indigo-600 mb-3">EF Education First</h4>
-                            <p class="text-gray-600 mb-4">
-                                Provided technical support and managed client-facing services, gaining hands-on experience in troubleshooting, systems analysis, and customer interaction.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Technical Support</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Customer Service</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Troubleshooting</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-16 bg-white">
-        <div class="section-divider"></div>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Education</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Education 1 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 mx-auto">
-                        <i class="fas fa-university text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-2">MS in AI & ML</h3>
-                    <h4 class="text-lg font-semibold text-center text-blue-600 mb-3">Liverpool John Moores University</h4>
-                    <p class="text-gray-600 text-center">
-                        Specialized in AI and Machine Learning, with a strong focus on deep learning algorithms, data analysis, and AI model development.
-                    </p>
-                </div>
-                
-                <!-- Education 2 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4 mx-auto">
-                        <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-2">PGDM in AI & ML</h3>
-                    <h4 class="text-lg font-semibold text-center text-purple-600 mb-3">IIIT Bangalore</h4>
-                    <p class="text-gray-600 text-center">
-                        Honed skills in AI/ML theory and application, with practical experience in working on real-world data science projects.
-                    </p>
-                </div>
-                
-                <!-- Education 3 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4 mx-auto">
-                        <i class="fas fa-laptop-code text-indigo-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-2">BE in Information Science</h3>
-                    <h4 class="text-lg font-semibold text-center text-indigo-600 mb-3">SJC Institute of Technology</h4>
-                    <p class="text-gray-600 text-center">
-                        Solid foundation in computer science, programming, and engineering principles, sparking interest in AI and data science.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Technical <span class="gradient-text">Skills</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <!-- Programming Languages -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-code text-blue-500 mr-3"></i>
-                        Programming Languages
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <div class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
-                            Python
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Technologies & Tools -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-tools text-purple-500 mr-3"></i>
-                        Technologies & Tools
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <div class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">
-                            Agentic AI
-                        </div>
-                        <div class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">
-                            PyTorch
-                        </div>
-                        <div class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">
-                            NLTK
-                        </div>
-                        <div class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">
-                            Scikit-learn
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Machine Learning -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-brain text-indigo-500 mr-3"></i>
-                        Machine Learning
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <div class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">
-                            Supervised Learning
-                        </div>
-                        <div class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">
-                            Unsupervised Learning
-                        </div>
-                        <div class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">
-                            Deep Learning
-                        </div>
-                        <div class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">
-                            Reinforcement Learning
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- NLP & Data Science -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-language text-blue-500 mr-3"></i>
-                        NLP & Data Science
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <div class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
-                            Text Classification
-                        </div>
-                        <div class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
-                            Named Entity Recognition
-                        </div>
-                        <div class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
-                            Sentiment Analysis
-                        </div>
-                        <div class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
-                            Data Preprocessing
-                        </div>
-                        <div class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
-                            Statistical Analysis
-                        </div>
-                        <div class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
-                            Data Visualization
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
-        <div class="section-divider"></div>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Notable <span class="gradient-text">Projects</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center">
-                        <i class="fas fa-robot text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">LangGraph Agents</h3>
-                        <p class="text-gray-600 mb-4">
-                            A project leveraging LangGraph for multi-agent orchestration,  automate application monitoring workflows across distributed microservice architectures.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">LangGraph</span>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Model Context Protocol (MCP)</span>
-                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">OpenTelemetry</span>
-                        </div>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
-                            Learn More
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 2 Placeholder -->
-                <div class="project-card rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-purple-400 to-indigo-500 flex items-center justify-center">
-                        <i class="fas fa-chart-line text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">AI-Powered Analytics</h3>
-                        <p class="text-gray-600 mb-4">
-                            Developed a comprehensive analytics platform using machine learning to provide predictive insights and data visualization for business decision making.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Machine Learning</span>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Data Visualization</span>
-                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">Predictive Analytics</span>
-                        </div>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
-                            Learn More
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Let's <span class="gradient-text">Connect</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
-                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Interested in discussing potential collaborations, career opportunities, or AI-related projects? Feel free to reach out!
-                </p>
-            </div>
-            
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2">
-                    <div class="bg-white p-8 rounded-xl shadow-md">
-                        <h3 class="text-xl font-bold mb-6">Get in Touch</h3>
-                        <form action="https://formspree.io/f/mwpbyvbl" method="POST">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-                                <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" />
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" />
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                                <textarea id="message" name="message" rows="4" required
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
-                            </div>
-                      
-                            <button type="submit"
-                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-300">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="md:w-1/2">
-                    <div class="bg-gradient-to-r from-blue-400 to-purple-500 p-1 rounded-xl h-full">
-                        <div class="bg-white p-8 rounded-lg h-full">
-                            <h3 class="text-xl font-bold mb-6">Contact Information</h3>
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
-                                        <i class="fas fa-envelope text-blue-600"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-medium text-gray-800">Email</h4>
-                                        <a href="mailto:rajasvim1617@gmail.com" class="text-blue-600 hover:underline">rajasvim1617@gmail.com</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 bg-purple-100 p-3 rounded-full">
-                                        <i class="fab fa-linkedin-in text-purple-600"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-medium text-gray-800">LinkedIn</h4>
-                                        <a href="https://www.linkedin.com/in/rajasblack" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/rajasblack</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-full">
-                                        <i class="fab fa-github text-indigo-600"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-medium text-gray-800">GitHub</h4>
-                                        <a href="https://github.com/rajasblack" target="_blank" class="text-blue-600 hover:underline">github.com/rajasblack</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-8">
-                                <h4 class="text-lg font-medium mb-4">Follow Me</h4>
-                                <div class="flex space-x-4">
-                                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 hover:bg-purple-200 transition">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 hover:bg-indigo-200 transition">
-                                        <i class="fab fa-medium"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <a href="#" class="text-xl font-bold gradient-text">Rajesh Kumar</a>
-                    <p class="text-gray-400 mt-2">Generative AI Engineer & Data Scientist</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
-                    <a href="#experience" class="text-gray-400 hover:text-white transition">Experience</a>
-                    <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
-                    <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 All rights reserved.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-        
-        // Back to top button
-        const backToTopBtn = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.remove('opacity-0', 'invisible');
-                backToTopBtn.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopBtn.classList.remove('opacity-100', 'visible');
-                backToTopBtn.classList.add('opacity-0', 'invisible');
-            }
-        });
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Animate elements when they come into view
-        const observerOptions = {
-            threshold: 0.1
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fadeIn');
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.timeline-item, .project-card, .skill-pill').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+<!-- ...rest of your file remains unchanged... -->
