@@ -6,7 +6,7 @@ Hello! I'm a **Generative AI Engineer** with extensive experience in **Data Scie
 
 I am driven by my passion for problem-solving and creating impactful solutions using AI. With a strong background in **Generative AI**, I have worked on diverse projects, including **LangGraph** using **Agents**, where I applied my skills to push the boundaries of artificial intelligence and machine learning.
 
-I thrive in both **independent and team-based environments**, collaborating with cross-functional teams to deliver optimal results. My goal is to continuously grow as a **developer** and **data scientist**, contributing to the development of intelligent systems that can transform industries and improve lives.
+I thrive in both **independent and team-based environments**, collaborating with cross-functional teams to deliver optimal results. My goal is to continuously grow as a **developer** and **AI Architect**, contributing to the development of intelligent systems that can transform industries and improve lives.
 
 ## Work Experience
 
@@ -39,7 +39,7 @@ My undergraduate education provided a solid foundation in computer science, prog
 ## Key Skills
 
 - **Programming Languages**: Python
-- **Technologies & Tools**: PyTorch, Scikit-learn, NLTK, OpenCV
+- **Technologies & Tools**: Agentic AI, PyTorch, Scikit-learn, NLTK
 - **Machine Learning**: Supervised & Unsupervised Learning, Deep Learning, Reinforcement Learning
 - **NLP**: Text Classification, Named Entity Recognition, Sentiment Analysis
 - **Data Science**: Data Preprocessing, Statistical Analysis, Data Visualization
@@ -47,7 +47,7 @@ My undergraduate education provided a solid foundation in computer science, prog
 ## Notable Projects
 
 ### LangGraph Agents  
-A project in which I leveraged **LangGraph** for building agent-based application support systems, focused on applying **Natural Language Processing (NLP)** techniques to improve AI-driven conversations and interactions.
+A project leveraging **LangGraph** for multi-agent orchestration, automate application monitoring workflows across distributed **microservice** architectures.
 
 ## Let's Connect
 
